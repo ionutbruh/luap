@@ -37,6 +37,7 @@ ScrollReveal().reveal(".section-title", {
 });
 ScrollReveal().reveal(".about-wrapper__image", {
   ...defaultProps,
+  distance :"-100px",
   delay: 600,
   scale: 0.5,
 });
