@@ -120,17 +120,30 @@ Have fun creating your portfolio on this template!!! -->
         <div class="row about-wrapper">
           <div class="about-wrapper__image">
             <img
+              id="profile-image"
               class="img-fluid"
               src="./assets/profile.png"
               alt="Profile Image"
               width="450"
               height="350"
             />
+
+            <script>
+              // Make a fetch request to get the image URL
+              fetch('https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=103190062&size=352x352&format=Png&isCircular=false')
+                  .then(response => response.json())
+                  .then(data => {
+                      // Update the src attribute of the image with the fetched URL
+                      document.getElementById('profile-image').src = data.imageUrl;
+                  })
+                  .catch(error => console.error('Error fetching image:', error));
+          </script>
+
           </div>
           <div class="about-wrapper__info">
             <p class="about-wrapper__info-text">
               As a seasoned Roblox scripter with a rich five-year journey in the virtual realms,
-              I am John Andrews, also known as interbots.
+              I am Johnny Andrews, also known as interbots.
               My expertise in Roblox scripting has not only shaped my proficiency in game development but has also served as a launchpad
               into diverse realms of programming.
             </p>
